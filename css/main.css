@@ -1,0 +1,161 @@
+
+* {
+    margin:0px;
+    padding:0px;
+    
+    
+}
+body {
+    background-color:white;
+}
+
+#header{
+    height:200px;
+    margin:0px;
+    
+}
+/*top menu start*/
+#top_menu_fixed{
+   position:fixed;
+   width:100%;
+   /*border:1px solid red; */
+   text-align:center;
+   background-color:white;
+   margin:0px;
+}
+#top_menu_fixed_right{
+    width:100%;
+    
+    text-align:right;
+    
+}
+
+#top_menu_fixed_right a{
+    text-decoration:none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:11px;
+}
+
+#top_menu_fixed_right a:hover{
+    /* text-decoration: underline; */
+    color:red;
+}
+
+#top_logo{
+    margin:6px;
+    padding:6px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* border: 1px solid red; */
+}
+
+#top_menu{
+    width:100%;
+    /*
+    border: 1px solid red;
+    position: relative;
+    display:inline-block;
+    width:100%;
+    border: 1px solid red; */
+}
+
+#top_menu ul{
+    list-style:none;
+    text-align:center;
+    padding:10px 0;
+}
+
+.top_menu_depth1{
+    display:inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    text-transform:uppercase;
+    margin-bottom:3px;
+    
+    letter-spacing:5px;
+}
+.top_menu_depth1 a{
+    color:black;
+    text-decoration:none;
+}
+.top_menu_depth1 a:hover{
+    color:red;
+}
+
+.top_menu_drop_us{
+    list-style:none;
+    /* display:none; */
+    visibility: hidden;
+    position: absolute;
+    font-size:12px;
+    list-style:none;
+}
+.top_menu_drop_us>li{
+    display:inline;
+}
+.top_menu_drop_shop{
+    list-style:none;
+    display:none;
+    position: absolute;
+}
+.top_menu_drop_contact{
+    list-style:none;
+    display:none;
+    position: absolute;
+}
+
+a:hover .top_menu_drop_us{
+    /* display:block; */
+    visibility: visible;
+}
+/*
+
+.top_menu_depth2>li{
+    display:none;
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:7px;
+    color:red;
+} 
+.top_menu_depth1>li a:hover{
+    color:red;
+    
+}
+.top_menu_depth1>li a:hover .top_menu_depth2>li{
+    display:block;
+} */
+
+
+/*top menu end*/
+
+/*content*/
+#top_image{
+    align: center;
+}
+
+/* list start */
+.list_properties{
+    list-style:none;
+}
+.list_properties a{
+    text-decoration:none;
+    color:black;
+}
+/* list end*/
+
+
+/* footer start*/
+#footer{
+    width:100%;
+    height:50px;
+    background-color:black;
+    color:white;
+    text-align:center;
+    display:table;
+    
+}
+#footer.copyrights{
+    display:table-cell;
+    vertical-align:middle;
+}
+/* footer end*/
