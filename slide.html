@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko" class="ns-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <link href="css/slide.css" rel="stylesheet" type="text/css">
+   
+</head>
+<body>
+    <div class="slideshow">
+        <img src="images/coffee-3224649_1920.jpg" alt="" width="1600" height="465">
+        <img src="images/coffee-2801325_1920.jpg" alt="" width="1600" height="465">
+        <img src="images/coffee-shop-1209863_1920.jpg" alt="" width="1600" height="465">
+        <img src="images/coffee-beans-1650788_1280.jpg" alt="" width="1600" height="465">
+    </div>
+</body>
+
+
+</html>
+
+<script>
+    $(function(){
+        $('.slideshow').each(function(){
+            var $slides = $(this).find('img'),
+                slideCount =$slides.length,
+                currentIndex = 0;
+
+                $slides.eq(currentIndex).fadeIn();
+                setInterval(showNextSlide,3000);
+
+                function showNextSlide(){
+                    var nextIndex = (currentIndex + 1) %slideCount;
+                    $slides.eq(currentIndex).fadeOut();
+
+                    $slides.eq(nextIndex).fadeIn();
+
+                    currentIndex = nextIndex;
+                }
+        });
+    });
+    </script>

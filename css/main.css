@@ -1,35 +1,40 @@
 
-* {
+*{
     margin:0px;
     padding:0px;
-    
-    
 }
 body {
     background-color:white;
+    margin:0px;
+    padding:0px;
     
 }
 
 #header{
-    height:200px;
+    height:210px;
     margin:0px;
+    /* border: 1px solid red;    */
+
     
-    
+  
 }
 
 
 /*top menu start*/
 #top_menu_fixed{
-   position:fixed;
+   position:fixed!important;
    width:100%;
+   height:210px;
    text-align:center;
-   background-color:white;
+   background-color:#d3c4bd;
    margin:0px;
+   z-index:99999;
    
 }
 #top_menu_fixed_right{
     width:100%;        
     text-align:right;
+    
     
 }
 #top_menu_fixed_right a{
@@ -47,6 +52,10 @@ body {
     margin:0px;
     padding:30px 6px;
     font-size:25px;
+}
+#top_logo a{
+    text-decoration:none;
+    color:black;
 }
 .menu_tap{
     padding:0px 15px;
@@ -103,122 +112,111 @@ menu_nav_ul{
 #contents{
     width:100%;
     height:100%;
-    margin:20px 0px 50px 0px;;
-    padding:0px;
+    padding:0px;    
+    
     
 }
 #top_image{
     width:100%;
-    /* align: center;
-    border: 1px solid red; */
     text-align: center;
 }
 
-/*슬라이드 몸통 */
-
-.slide{
-    background : gray; text-align:center; position:relative; width: 900px; margin: 0 auto; display: block; height:200px;
+.slideshow{
+    overflow:hidden;
+    position:relative;
+    min-width:960px;
+    height:465px;
+    margin:0px;
 }
 
-.slide_ul{display: block;}
-.slide_ul>li{position:absolute; top:0; left:0; list-style:none;z-index:10; display: block;}
-.slide_ul>li img{}
-li{list-style: none;}
-
-.show{display:block;}
-
-
-/* 하단 동그라미 버튼 CSS*/
-.slide_btn>li{float: left; margin:0 5px 5px 0;}
-.slide_btn>li>a{display:block; width: 14px; height:14px; background: url(../images/spr.png) -24px -125px; text-indent: -999em; }
-.slide_btn>li>a.active{background-position: 0 -126px;}
-
-.slide_btn{z-index:100; position:absolute; right: 0; bottom:0; }
-
-.slide_btn:after{content:''; display:block; clear:both;}
-.slide_btn{*zoom:1;}
-
-/* list start */
-
-#list_page{
-    margin:30px 0px;
-    
-
+.slideshow img{
+    display:none;
+    position:absolute;
+    left:50%;
+    margin-left:-800px;
 }
-#list_title{
+.no-js.slideshow img:first-child{
+    display:inline;
+}
+
+
+/*listing section*/
+/*list1 원두 */
+.list_page{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:1600px;
+}
+.list_title{
     padding:10px 0px;
-    /* border:1px solid red; */
 }
-#list_title span{
+.list_title span{
     float:right;
     padding: 0px 10px 0px 0px;
 }
-
-
-.list_properties1>li{
-    float:left;
-    margin:5px;
-    width:300px;
-    padding:20px;
+.list_page_sub{
+    padding:10px 0;
 }
-
-.list_properties1>li a{
+.list_page_sub ul.list_properties{
+    list-style: none;
+    overflow: hidden;
+}
+.list_page_sub ul.list_properties li{
+    display: block;
+    width:25%;
+    height:auto;
+    position: relative;
+    float:left;
+    margin: 0 3.6363% 3.6363%, 0;
+}
+.list_page_sub ul.list_properties li img.property_img{
+    width:50%;
+    height: auto!important;
+    vertical-align: top;
+}
+.list_page_sub ul.list_properties li:nth-child(4n+0){
+    margin-right:0px;
+}
+.list_properties>li a{
     color:black;
     text-decoration:none;
 }
 
-#list_page2{
 
-    clear:both;
-    margin:30px 10px;
-}
-.list_properties2>li{
-    float:left;
-    margin:5px;
-    width:300px;
-    padding:20px;
-}
-
-.list_properties2>li a{
-    color:black;
-    text-decoration:none;
-}
-
-#list_page3{
-
-    clear:both;
-    margin:30px 10px;
-}
-.list_properties3>li{
-    float:left;
-    margin:5px;
-    width:300px;
-    padding:20px;
-}
-
-.list_properties3>li a{
-    color:black;
-    text-decoration:none;
-}
-
-#list_page4{
-
-    clear:both;
-    margin:30px 10px;
-}
-.list_properties4>li{
-    float:left;
-    margin:5px;
-    width:300px;
-    padding:20px;
-}
-
-.list_properties4>li a{
-    color:black;
-    text-decoration:none;
-}
 
 /* list end*/
+
+
+
+/*about*/
+.aboutContents{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:1600px;
+}
+.abountTitle p{
+    margin: 20px 0px 20px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:black;
+    font-size:20px;
+    font-weight: bold;
+}
+
+/* 뉴스 */
+.news_title{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:20px;
+    font-weight:bold;
+    width:70%;
+    margin-bottom: 15px;
+    margin-top:20px;
+}
+
 
 
 /* footer start*/
@@ -238,3 +236,7 @@ li{list-style: none;}
     
 }
 /* footer end*/
+
+/* @media screen and (max-width:600px){
+    #top_menu_fixed{visibility:hidden;}
+} */
